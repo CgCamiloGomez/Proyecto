@@ -1,0 +1,20 @@
+
+    html{
+        background: url(../Imagenes/FondoPantallaUno_8.jpg) no-repeat center center fixed;
+        background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+    }
+
+    body{
+        margin: 300px 300px 300px 300px;
+        min-width: max-content;
+    }
+    .divOpaco{
+        background-color: #ffffff;
+        /* border: 1px solid black; */
+        opacity: 0.8 !important;
+        filter: alpha(opacity=30); 
+    }
+
