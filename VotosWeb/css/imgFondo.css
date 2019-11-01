@@ -17,4 +17,8 @@
         opacity: 0.8 !important;
         filter: alpha(opacity=30); 
     }
-
+    .imgAling {
+        float: left;
+        width: 30%;
+        margin-left: 30px;
+    }
