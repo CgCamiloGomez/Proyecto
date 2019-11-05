@@ -16,7 +16,7 @@
     <div class="container">
         <div class="card text-center">
             <div class="card-header">
-                <!-- <h2>ELECCIONES PARA PRECIDENCIA AÑO 2019</h2>  -->
+                <h2>ELECCIONES PARA PRECIDENCIA AÑO 2019</h2> 
                 <div>
                     <button type="button" class="btn btn-primary">
                         VOTOS <span class="badge badge-light">4</span>
@@ -28,8 +28,8 @@
                 <h5 class="card-title">CANDIDATOS</h5>
                 <div id="contenedorImg">
                     
-                        <div class="card imgAling">
-                            <img id= "imagenUno" style="width: 100%;" src="Imagenes/PantallaCancha.JPG" alt="..." class="img-thumbnail" onclick="ola()">
+                        <div class="card imgAling" onclick='hola()'>
+                            <img id= "imagenUno" style="width: 100%;" src="Imagenes/PantallaCancha.JPG" alt="..." class="img-thumbnail">
                             <div class="card-body">
                                 <h5 class="card-title">Card with stretched link</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -115,8 +115,8 @@
 
     <script>
        
-       //Una forma de toamr el evento del click sobre la imagen.
-       function ola(){
+       //Una forma de tomar el evento del click sobre la imagen.
+       function hola(){
            alert("Imagen Uno");
        }
        //Fin primera forma
