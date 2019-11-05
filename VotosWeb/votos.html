@@ -69,14 +69,17 @@
 
     <script>
        
+        var candidato = new Object();
+        
+
        //Una forma de tomar el evento del click sobre la imagen.
        function hola(){
-        var nombre = event.currentTarget.children[1].children.nombre.innerHTML
-        var partido = event.currentTarget.children[1].children.partido.innerHTML
+        candidato.nombre = event.currentTarget.children[1].children.nombre.innerHTML
+        candidato.partido = event.currentTarget.children[1].children.partido.innerHTML
         //    var voto = event.currentTarget.id
             //document.getElementById(voto);
 
-           alert(nombre + partido );
+           alert(candidato);
        }
        //Fin primera forma
 
