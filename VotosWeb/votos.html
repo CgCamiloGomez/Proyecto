@@ -28,80 +28,34 @@
                 <h5 class="card-title">CANDIDATOS</h5>
                 <div id="contenedorImg">
                     
-                        <div class="card imgAling" onclick='hola()'>
-                            <img id= "imagenUno" style="width: 100%;" src="Imagenes/PantallaCancha.JPG" alt="..." class="img-thumbnail">
+                        <div id= "candidatoUno" class="card imgAling" onclick='hola()'>
+                            <img style="width: 100%;" src="Imagenes/PantallaCancha.JPG" alt="..." class="img-thumbnail">
                             <div class="card-body">
-                                <h5 class="card-title">Card with stretched link</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                    content.</p>
-                                <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
+                                <h5 id="nombre" class="card-title" value="1235">ANDRES PASTRANA</h5>
+                                <p id="partido" class="card-text">PARTIDO DE LA U</p>
+                                <!-- <a href="#" class="btn btn-primary stretched-link">Go somewhere</a> -->
                             </div>
                         </div>
 
 
-                        <div id= "imagenDos" class="card imgAling">
+                        <div id= "candidatoDos" class="card imgAling" onclick='hola()'>
                                 <img  style="width: 100%;" src="Imagenes/PantallaCancha.JPG" alt="..." class="img-thumbnail">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card with stretched link</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                        content.</p>
-                                    <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
+                                    <h5 id="nombre" class="card-title">GUSTAVO PETRO</h5>
+                                    <p id="partido" class="card-text">CENTRO DEMOCRATICO</p>
+                                    <!-- <a href="#" class="btn btn-primary stretched-link">Go somewhere</a> -->
                                 </div>
                         </div>
 
                         
-                        <div class="card imgAling">
-                                <img id= "imagenTres" style="width: 100%;" src="Imagenes/PantallaCancha.JPG" alt="..." class="img-thumbnail">
+                        <div id= "candidatoTres" class="card imgAling" onclick='hola()'>
+                                <img style="width: 100%;" src="Imagenes/PantallaCancha.JPG" alt="..." class="img-thumbnail">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card with stretched link</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                        content.</p>
-                                    <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
+                                    <h5 id="nombre" class="card-title">VOTO EN BLANCO</h5>
+                                    <p id="partido" class="card-text"></p>
+                                    <!-- <a href="#" class="btn btn-primary stretched-link">Go somewhere</a> -->
                                 </div>
                         </div>  
-
-
-                        <!-- <div class="card imgAling">
-                                <img id= "imagenUno" style="width: 100%;" src="Imagenes/PantallaCancha.JPG" alt="..." class="img-thumbnail" onclick="ola()">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card with stretched link</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                        content.</p>
-                                    <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
-                                </div>
-                            </div>
-    
-    
-                            <div class="card imgAling">
-                                    <img id= "imagenDos" style="width: 100%;" src="Imagenes/PantallaCancha.JPG" alt="..." class="img-thumbnail">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card with stretched link</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                            content.</p>
-                                        <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
-                                    </div>
-                            </div>
-    
-                            
-                            <div class="card imgAling">
-                                    <img id= "imagenTres" style="width: 100%;" src="Imagenes/PantallaCancha.JPG" alt="..." class="img-thumbnail">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card with stretched link</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                            content.</p>
-                                        <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
-                                    </div>
-                            </div>   -->
-    
-                    <!-- <img id= "imagenUno" style="width: 30%;" src="Imagenes/PantallaCancha.JPG" alt="..." class="img-thumbnail" onclick="ola()">
-                    <img id= "imagenDos" style="width: 30%;" src="Imagenes/PantallaCancha.JPG" alt="..." class="img-thumbnail">
-                    <img style="width: 30%;" src="Imagenes/PantallaCancha.JPG" alt="..." class="img-thumbnail">
-                    <img style="width: 30%;" src="Imagenes/PantallaCancha.JPG" alt="..." class="img-thumbnail">
-                    <img style="width: 30%;" src="Imagenes/PantallaCancha.JPG" alt="..." class="img-thumbnail">
-                    <img style="width: 30%;" src="Imagenes/PantallaCancha.JPG" alt="..." class="img-thumbnail">
-                    <img style="width: 30%;" src="Imagenes/PantallaCancha.JPG" alt="..." class="img-thumbnail">
-                    <img style="width: 30%;" src="Imagenes/PantallaCancha.JPG" alt="..." class="img-thumbnail">
-                    <img style="width: 30%;" src="Imagenes/PantallaCancha.JPG" alt="..." class="img-thumbnail"> -->
                 </div>
                 
                 <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -117,15 +71,20 @@
        
        //Una forma de tomar el evento del click sobre la imagen.
        function hola(){
-           alert("Imagen Uno");
+        var nombre = event.currentTarget.children[1].children.nombre.innerHTML
+        var partido = event.currentTarget.children[1].children.partido.innerHTML
+        //    var voto = event.currentTarget.id
+            //document.getElementById(voto);
+
+           alert(nombre + partido );
        }
        //Fin primera forma
 
        //Segunda forma para tomar el click
-       var imagen = document.getElementById('imagenDos');
-       imagen.addEventListener('click', function(){
-           alert("Imagen Dos");
-       });
+    //    var imagen = document.getElementById('imagenDos');
+    //    imagen.addEventListener('click', function(){
+    //        alert("Imagen Dos");
+    //    });
     </script>
 </body>
 

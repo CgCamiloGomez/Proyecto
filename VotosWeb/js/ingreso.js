@@ -12,5 +12,11 @@ btn.addEventListener('click', function () {
         // para validar que el usuairo que ingresa tiene número de cedula
         alert(valueInput);
         window.open("votos.html");
+        //var newUrl = "votos.html";
+        //document.location.href = newUrl;
+        //window.open (location.assign("file:///D:/Proyecto/VotosWeb/votos.html"));
+        //document.location.replace("file:///D:/Proyecto/VotosWeb/votos.html");    
     }
+
+    
 });
