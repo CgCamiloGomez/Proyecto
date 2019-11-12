@@ -4,7 +4,7 @@ var imput = document.getElementById('inputCedula');
 var valueInput;
 btn.addEventListener('click', function () {
     valueInput = imput.value
-    obtenerDatos();
+    obtenerDatos(valueInput);
     // if (valueInput == "") {
     //     alert("Por favor ingresar un valor");
     // }
@@ -23,8 +23,8 @@ btn.addEventListener('click', function () {
     
 });
 
-function obtenerDatos(){
-    let url `http://192.168.1.4:52861/api/Electores/`;
+function obtenerDatos(valueInput){
+    let url = `http://localhost:4035/ApiVotos/api/Electores/`+ valueInput;
 
     const api = new XMLHttpRequest();
     api.open('GET', URL, true)
