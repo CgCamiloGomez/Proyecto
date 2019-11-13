@@ -28,7 +28,7 @@
                 <h5 class="card-title">CANDIDATOS</h5>
                 <div id="contenedorImg">
                     
-                        <div id= "candidatoUno" class="card imgAling" onclick='hola()'>
+                        <div id= "candidatoUno" class="card imgAling" >
                             <img style="width: 100%;" src="Imagenes/PantallaCancha.JPG" alt="..." class="img-thumbnail">
                             <div class="card-body">
                                 <h5 id="nombre" class="card-title" value="1235">ANDRES PASTRANA</h5>
@@ -38,7 +38,7 @@
                         </div>
 
 
-                        <div id= "candidatoDos" class="card imgAling" onclick='hola()'>
+                        <div id= "candidatoDos" class="card imgAling">
                                 <img  style="width: 100%;" src="Imagenes/PantallaCancha.JPG" alt="..." class="img-thumbnail">
                                 <div class="card-body">
                                     <h5 id="nombre" class="card-title">GUSTAVO PETRO</h5>
@@ -48,7 +48,7 @@
                         </div>
 
                         
-                        <div id= "candidatoTres" class="card imgAling" onclick='hola()'>
+                        <div id= "candidatoTres" class="card imgAling">
                                 <img style="width: 100%;" src="Imagenes/PantallaCancha.JPG" alt="..." class="img-thumbnail">
                                 <div class="card-body">
                                     <h5 id="nombre" class="card-title">VOTO EN BLANCO</h5>
@@ -67,28 +67,7 @@
         </div>
     </div>
 
-    <script>
-       
-        var candidato = new Object();
-        
-
-       //Una forma de tomar el evento del click sobre la imagen.
-       function hola(){
-        candidato.nombre = event.currentTarget.children[1].children.nombre.innerHTML
-        candidato.partido = event.currentTarget.children[1].children.partido.innerHTML
-        //    var voto = event.currentTarget.id
-            //document.getElementById(voto);
-
-           alert(candidato);
-       }
-       //Fin primera forma
-
-       //Segunda forma para tomar el click
-    //    var imagen = document.getElementById('imagenDos');
-    //    imagen.addEventListener('click', function(){
-    //        alert("Imagen Dos");
-    //    });
-    </script>
+    <script src="/js/votos.js"></script>
 </body>
 
 </html>
