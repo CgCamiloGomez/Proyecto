@@ -43,7 +43,7 @@ return new Promise((resolve,reject)=>{
                 window.open("votos.html");
                 imput.value = "";
                 //var document = datos.Documento;
-                localStorage.setItem(document,datos.Documento);
+                localStorage.setItem(document,datos.Id);//https://developer.mozilla.org/es/docs/Web/API/Window/localStorage
             }
             //resolve('OK');
           } 
