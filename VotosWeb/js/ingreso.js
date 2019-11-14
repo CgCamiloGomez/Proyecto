@@ -60,6 +60,9 @@ return new Promise((resolve,reject)=>{
 });
 }
 
+
+
+
 function obtenerDatos(valueInput){
     // let url = 'http://localhost:4035/ApiVotos/api/Electores/'+valueInput;
     let url = 'http://localhost:52861/api/Electores/'+valueInput;
