@@ -1,10 +1,10 @@
 
 var candidato = new Object();
-
+var bodyData;
 document.getElementById('candidatoUno').addEventListener('click', capturarDatosVoto);
 document.getElementById('candidatoDos').addEventListener('click', capturarDatosVoto);
 document.getElementById('candidatoTres').addEventListener('click', capturarDatosVoto);
-document.getElementById('').addEventListener('click', sendData);
+document.getElementById('btnVoto').addEventListener('click', sendData);
 
 function capturarDatosVoto() {
     var Idcandidato;
@@ -31,23 +31,32 @@ function capturarDatosVoto() {
     //document.getElementById(voto);
 
     alert(candidato.nombre + candidato.partido);
-    alert(localStorage.getItem(document)); //https://developer.mozilla.org/es/docs/Web/API/Window/localStorage
-}
+    var documento = localStorage.getItem(document);
+    alert(documento); //https://developer.mozilla.org/es/docs/Web/API/Window/localStorage
 
-function body(){
-    var bodyData = JSON.stringify({
+    bodyData = JSON.stringify({
         "IdPuestoVotacion":1,
-        "IdCandidato": Idcandidato
+        "IdCandidato": Idcandidato,
+        "IdElector": documento
     });
-
-    return bodyData;
 }
+
+// function body(){
+    // var bodyData = JSON.stringify({
+    //     "IdPuestoVotacion":1,
+    //     "IdCandidato": Idcandidato,
+    //     "IdElector": documento
+    // });
+
+    // return bodyData;
+// }
 
 
 function sendData() {
    
     return new Promise((resolve,reject)=>{
-        let url = 'http://localhost:4035/ApiVotos/api/Electores/'+valueInput;
+        // let url = 'http://localhost:4035/ApiVotos/api/Electores/;
+        let url = 'http://localhost:52861/api/Votos';
         const api = new XMLHttpRequest(); 
         api.onreadystatechange = () => {
             //alert('ready');
@@ -64,8 +73,8 @@ function sendData() {
             }
           };
         api.open('POST', url);
-        api.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        api.send(body());
+        api.setRequestHeader('Content-Type', 'application/json');
+        api.send(bodyData);
     });
 }
     

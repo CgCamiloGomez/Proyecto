@@ -31,7 +31,7 @@ btn.addEventListener('click', function () {
 
 function obtenerDatosB(valueInput) {
 return new Promise((resolve,reject)=>{
-    let url = 'http://localhost:4035/ApiVotos/api/Electores/'+valueInput;
+    let url = 'http://localhost:52861/api/Electores/'+valueInput;
     const api = new XMLHttpRequest(); 
     api.onreadystatechange = () => {
         //alert('ready');
@@ -61,7 +61,8 @@ return new Promise((resolve,reject)=>{
 }
 
 function obtenerDatos(valueInput){
-    let url = 'http://localhost:4035/ApiVotos/api/Electores/'+valueInput;
+    // let url = 'http://localhost:4035/ApiVotos/api/Electores/'+valueInput;
+    let url = 'http://localhost:52861/api/Electores/'+valueInput;
     const api = new XMLHttpRequest();
    //api.onreadystatechange = callback;
     //api.setRequestHeader("Content-type", "application/json"); //Cuando se haga la petición POST SE AGREGA ESTA LÍNEA
