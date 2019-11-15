@@ -39,18 +39,20 @@ return new Promise((resolve,reject)=>{
         if (api.readyState === 4) { // 4 terminó el proceso.
           if (api.status === 200) {
             let datos = JSON.parse(api.responseText);
-            if (datos!=null){
+            if (datos.Documento!=null){
                 window.open("votos.html");
                 imput.value = "";
                 //var document = datos.Documento;
                 localStorage.setItem(document,datos.Id);//https://developer.mozilla.org/es/docs/Web/API/Window/localStorage
+                datos = null;
             }
             //resolve('OK');
           } 
-          else{
-            alert("No se encontraron datos asociados a la identificación");
-          }
+        //   else{
+        //     alert("No se encontraron datos asociados a la identificación");
+        //   }
           console.log(api.response);
+          alert("No se encontraron datos asociados a la identificación");
           reject('error');
         }
       };

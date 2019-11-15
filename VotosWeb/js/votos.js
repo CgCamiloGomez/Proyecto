@@ -76,7 +76,7 @@ function sendData() {
                 consultarVotosPuestoVotacion();
                 clearlocalStorage();
                 alert("Su voto se registro con exito");
-                window.close();
+                //window.close();
               } 
               else{
                 alert("No se encontraron datos asociados a la identificación");
@@ -101,15 +101,14 @@ function consultarVotosPuestoVotacion(){
             //console.log('estado',api.readyState);
             if (api.readyState === 4) { // 4 terminó el proceso.
               if (api.status === 200) {
-                let datos = JSON.parse(api.responseText);
-                if (datos!=null){
-                    //window.open("votos.html");
-                    //imput.value = "";
+                let numVotos = api.responseText;
+                if (numVotos!=null){
+                    document.getElementById("numeroVotos").innerHTML = numVotos;
                 }
-                //resolve('OK');
+                
               } 
               else{
-                alert("No se encontraron datos asociados a la identificación");
+                alert("");
               }
               console.log(api.response);
               reject('error');
@@ -134,6 +133,7 @@ function consultarVotosCandidatos(){
                 if (datos!=null){
                     //window.open("votos.html");
                     //imput.value = "";
+                    console.log(datos);
                 }
                 //resolve('OK');
               } 
