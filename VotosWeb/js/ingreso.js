@@ -46,14 +46,13 @@ return new Promise((resolve,reject)=>{
                 localStorage.setItem(document,datos.Id);//https://developer.mozilla.org/es/docs/Web/API/Window/localStorage
                 datos = null;
             }
-            //resolve('OK');
+            resolve('OK');
           } 
-        //   else{
-        //     alert("No se encontraron datos asociados a la identificación");
-        //   }
-          console.log(api.response);
-          alert("No se encontraron datos asociados a la identificación");
-          reject('error');
+          else{
+            alert("No se encontraron datos asociados a la identificación");
+          }
+          //console.log(api.response);
+          reject('No se encontraron datos asociados a la identificación');
         }
       };
     api.open('GET', url);

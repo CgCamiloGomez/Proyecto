@@ -18,10 +18,24 @@
             <div class="card-header">
                 <h2>ELECCIONES PARA PRESIDENCIA AÑO 2019</h2> 
                 <div>
-                    <button type="button" class="btn btn-primary">
-                        VOTOS <span id="numeroVotos" class="badge badge-light">0</span>
+                    <button id="consultarVotos" type="button" class="btn btn-primary">
+                        VOTOS <span class="badge badge-light">4</span>
                     </button>
                 </div>
+                <ul id="tablaVotos" class="list-group" hidden>
+                    <li id="votosCandidatoUno"class="list-group-item d-flex justify-content-between align-items-center">
+                      
+                      <span id="numVotosCanUno" class="badge badge-primary badge-pill"></span>
+                    </li>
+                    <li id="votosCandidatoDos" class="list-group-item d-flex justify-content-between align-items-center">
+                      
+                      <span id="numVotosCanDos" class="badge badge-primary badge-pill"></span>
+                    </li>
+                    <li id="votosCandidatoTres"class="list-group-item d-flex justify-content-between align-items-center">
+                      
+                      <span id="numVotosCanTres" class="badge badge-primary badge-pill"></span>
+                    </li>
+                  </ul>
 
             </div>
             <div class="card-body">
@@ -57,12 +71,9 @@
                                 </div>
                         </div>  
                 </div>
-                
-                <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a> -->
             </div>
             <div class="card-footer text-muted">
-                <a id="btnVoto" class="btn btn-primary">VOTAR</a>
+                <a href="#"  id="btnVoto" class="btn btn-primary">VOTAR</a>
             </div>
         </div>
     </div>
